@@ -16,12 +16,13 @@ info:
 navbar:
   visiable: auto # always, auto
   logo: # choose [img] or [icon + title]
-    img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+    img: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
     icon:
     title:
   menu:
-    - name: 博客
-      icon: fas fa-rss
+    # The following can be written in `blog/source/_data/menu.yml`
+    - name: 主页
+      icon: fas fa-home
       url: /
     - name: 分类
       icon: fas fa-folder-open
@@ -38,48 +39,71 @@ navbar:
     - name: 关于
       icon: fas fa-info-circle
       url: about/
-  search: Search...   # Search bar placeholder
+    #- name: 更多
+    #  icon: fas fa-ellipsis-v
+    #  rows:
+    #    - name: 主题源码
+    #      url: https://github.com/volantis-x/hexo-theme-volantis/
+    #    - name: 更新日志
+    #      url: https://github.com/volantis-x/hexo-theme-volantis/releases/
+    #    - name: hr
+    #    - name: 有疑问？
+    #      rows:
+    #        - name: 看 FAQ
+    #          url: faqs/
+    #        - name: 看 本站源码
+    #          url: https://github.com/volantis-x/volantis-docs/
+    #        - name: 提 Issue
+    #          url: https://github.com/volantis-x/hexo-theme-volantis/issues/
+    #    - name: hr
+    #    - name: 公告和测试博文
+    #      url: archives/
+    #    - name: 示例博客
+    #      url: examples/
+    #    - name: 特别感谢
+    #      url: contributors/
+  search: illusion's code   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
 
 ############################### Cover ############################### > start
 cover:
   height_scheme: full # full, half
-  layout_scheme: dock # blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)
+  layout_scheme: search # blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)
   display:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg
-  logo: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
-  title: 'Volantis'
+  background: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg
+  logo: https://img-rep.oss-cn-shenzhen.aliyuncs.com/img/illusionLog.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
+  title: 
   subtitle: ''
-  search: A Wonderful Theme for Hexo # search bar placeholder
+  search:  illusion's code # search bar placeholder
+  # 封面菜单
   features:
-    - name: 文档
-      icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
-      url: /v4/getting-started/
-    - name: 帮助
-      icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
-      url: faqs/
-    - name: 示例
-      icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg
-      url: /examples/
-    - name: 社区
-      icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg
-      url: /contributors/
-    - name: 博客
-      icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
+    - name: 主页
+      icon: fas fa-home
+      url: /
+    - name: 分类
+      icon: fas fa-folder-open
+      img: #
+      url: /categories/
+    - name: 标签
+      icon: fas fa-tags
+      img: #
+      url: /tags/
+    - name: 归档
+      icon: fas fa-archive
+      img: #
       url: /archives/
-    - name: 源码
-      icon: #
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
-      url: https://github.com/volantis-x/hexo-theme-volantis/
+    - name: 友链
+      icon: fas fa-link
+      img: #
+      url: /friends/
+    - name: 关于
+      icon: fas fa-info-circle
+      img: #
+      url: /about/
 ############################### Cover ############################### > end
 
 pages:
@@ -109,7 +133,7 @@ article:
   body:
     # 文章顶部信息
     # 从 meta_library 中取
-    top_meta: [author, category, date, counter]
+    top_meta: [author, category, wordcount , date, counter,valinecount] # [author, category, date, counter]
     # ----------------
     # 文章页脚组件
     footer_widget:
@@ -136,7 +160,7 @@ article:
       # ----------------
       # 版权声明组件 (for layout: post)
       copyright:
-        enable: true
+        enable: false
         permalink: '本文永久链接是：'
         content:
           - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
@@ -155,9 +179,9 @@ article:
     meta_library:
       # 默认文章作者（可在 front-matter 中覆盖）
       author:
-        avatar:
-        name: 请设置文章作者
-        url: /
+        avatar: https://img-rep.oss-cn-shenzhen.aliyuncs.com/img/headPic.png
+        name: illusion k
+        url: https://illusionk.com
       # 文章创建日期
       date:
         icon: fas fa-calendar-alt
@@ -209,9 +233,9 @@ comments:
   # Valine
   # https://valine.js.org/
   valine:
-    appId: # your appId
-    appKey: # your appKey
-    # js: https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
+    appId: 9h5vPjEV1WRToeKQb6ky3FBC-gzGzoHsz  # your appId
+    appKey: dyhoFVYN3Kw1lNdtn0Y1HJiy  # your appKey
+    js:   https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js # https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
     path: # 全局评论地址
     placeholder: 快来评论吧~  # 评论占位提示
     meta: nick,mail,link # valine comment header info
@@ -220,9 +244,12 @@ comments:
     avatar: robohash # gravatar style https://valine.js.org/avatar
     pageSize: 10 # comment list page size
     lang: zh-cn
-    highlight: true
-    visitor: true
-    mathJax: false
+    highlight: true # 代码高亮功能
+    visitor: true # 开启文章阅读统计 
+    mathJax: false # 数学公式功能
+    # 根据js增强版，添加功能
+    tagMeta: [“博主”,“小伙伴”,“访客”]
+
   # MiniValine
   # https://github.com/MiniValine/MiniValine
   minivaline:
@@ -312,7 +339,7 @@ comments:
 ############################### Sidebar ############################### > start
 sidebar:
   # 主页、分类、归档等独立页面
-  for_page: [blogger, category, tagcloud, qrcode]
+  for_page: [blogger, category, webinfo , tagcloud, qrcode]
   # layout: docs/post 这类文章页面
   for_post: [toc]
   # 侧边栏组件库
@@ -322,21 +349,21 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+      avatar: https://img-rep.oss-cn-shenzhen.aliyuncs.com/img/unicorn_PNG02.png
       shape: rectangle # circle, rectangle
       url: /about/
       title:
       subtitle:
       jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
-        - icon: fas fa-rss
-          url: /atom.xml
+        - icon: fas fa-home
+          url: /
         - icon: fas fa-envelope
-          url: mailto:me@xxx.com
+          url: mailto:illusiona@163.com
         - icon: fab fa-github
           url: https://github.com/volantis-x/
-        - icon: fas fa-headphones-alt
-          url: /
+        - icon: fab fa-qq
+          url: http://wpa.qq.com/msgrd?v=3&uin=908804994&site=qq&menu=yes
     # ---------------------------------------
     # toc widget (valid only in articles)
     toc:
@@ -356,7 +383,7 @@ sidebar:
       header:
         icon: fas fa-folder-open
         title: 文章分类
-        url: /blog/categories/
+        url: /categories/
     # ---------------------------------------
     # tagcloud widget
     tagcloud:
@@ -397,7 +424,7 @@ sidebar:
           unit: '篇'
         runtime:
           enable: true
-          data: '2020/01/01'    # 填写建站日期
+          data: '2020/08/21'    # 填写建站日期
           text: '已运行时间：'
           unit: '天'
         wordcount:
@@ -430,7 +457,7 @@ tag_plugins:
     iconfont: 'Font Awesome 5 Free'
   # {% checkbox %}
   checkbox:
-    interactive: false # enable interactive for user
+    interactive: true # enable interactive for user
     color: '' # color for default checkbox
   # {% link title, url, img %}
   link:
@@ -649,7 +676,7 @@ plugins:
 rightmenu:
   enable: #true
   # hr: 分割线, music: 音乐控制器
-  layout: [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, music]
+  layout: [home, help, examples, contributors, hr ,print] # [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, music]
   # 可选功能项
   print:
     name: 打印页面
@@ -657,25 +684,25 @@ rightmenu:
     onclick: document.execCommand('print')
   # 自定义菜单的格式如下
   help:
-    name: 常见问题
-    icon: fa fa-question
-    url: https://volantis.js.org/faqs/
+    name: 分类 # 常见问题
+    icon: fas fa-folder-open # fa fa-question
+    url: categories/  # https://volantis.js.org/faqs/
   examples:
-    name: 示例博客
-    icon: fa fa-rss
-    url: https://volantis.js.org/examples/
+    name: 友链
+    icon: fas fa-link
+    url: friends/
   contributors:
     name: 加入社区
     icon: fa fa-fan fa-spin
     url: https://volantis.js.org/contributors/
-  source_docs:
-    name: 本站源码
-    icon: fa fa-code-branch
-    url: https://github.com/volantis-x/volantis-docs/
-  source_theme:
-    name: 主题源码
-    icon: fa fa-code-branch
-    url: https://github.com/volantis-x/hexo-theme-volantis/
+  # source_docs:
+  #   name: 本站源码
+  #   icon: fa fa-code-branch
+  #   url: https://github.com/volantis-x/volantis-docs/
+  # source_theme:
+  #   name: 主题源码
+  #   icon: fa fa-code-branch
+  #   url: https://github.com/volantis-x/hexo-theme-volantis/
 ############################### Rightmenu ############################### > end
 
 
@@ -685,7 +712,7 @@ rightmenu:
 search:
   enable: true
   service: hexo  # hexo, google, algolia, azure, baidu
-  js:
+  js:  https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3.0/js/search.js
   google:
     apiKey:
     engineId:
@@ -813,7 +840,7 @@ custom_css:
     border: 2px
   navbar:
     height: 64px
-    width: auto # auto, max
+    width: max # auto, max
     effect: [shadow, blur] # [shadow, floatable, blur]
   sidebar:
     effect: [shadow] # [shadow, floatable, blur]
@@ -834,14 +861,14 @@ custom_css:
     h3: 24px # Spacing above H3 (only px unit)
     h4: 16px # Spacing above H4 (only px unit)
     p: 1em # Paragraph spacing between paragraphs
-    line_height: 1.6 # normal, 1.5, 1.75, 2 ...
+    line_height: 1.65 # normal, 1.5, 1.75, 2 ...
   border_radius:
     card: 8px
     codeblock: 4px
     searchbar: 8px
     button: 4px
   fontsize:
-    root: 16px
+    root: 15px
     h1: 1.5rem # 不推荐用在文章中
     h2: 1.5rem
     h3: 1.25rem

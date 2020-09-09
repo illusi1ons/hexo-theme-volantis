@@ -200,7 +200,7 @@ ul.m-pc
     color: inherit
     border-bottom: 2px solid transparent
     &:active,&.active
-      border-bottom: 2px solid $color-theme
+      border-bottom: 2px solid #656565
 ul.m-pc,ul.list-v
   li:hover
     >ul.list-v
@@ -289,9 +289,9 @@ ul.list-v
     overflow: hidden
     color: inherit
     &:active,&.active
-      color: $color-theme
+      color: #656565
   &:hover>a
-    color: var(--color-list-hl)
+    color: #000000
   i.music
     animation: rotate-effect 1.5s linear infinite
     @keyframes rotate-effect
@@ -328,7 +328,7 @@ ul.list-v
       margin-left: auto
       margin-right: $gap
     .menu
-      order: 1
+      order: 1px     /*导航栏max设置 不加px，内容最右 */
     .menu li ul.list-v
       right: 0
       ul

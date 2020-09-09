@@ -2,6 +2,22 @@
 <html>
 <%- partial('_partial/head') %>
 <body>
+    <!-- 数字雨 -->
+    <script type="text/javascript" src="/js/DigitalRain.js"></script>
+    <canvas id="canvas" width="1920" height="1080" ></canvas>
+    <style type="text/css">
+      #canvas {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: auto;
+        z-index: -1;
+      }
+    </style>
+
   <%- partial('_partial/header', null, {cache: false, path: path}) %>
   <div class="l_body">
     <%- partial('_partial/cover') %>
@@ -22,5 +38,8 @@
       <%- partial('_third-party/pjax/index') %>
     <% } %>
   </div>
+  <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+  <script src="https://cdn.jsdelivr.net/gh/illusi1ons/CDN/js/maodian.js"></script>
+  <script async="" referrerpolicy="no-referrer" src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
 </body>
 </html>

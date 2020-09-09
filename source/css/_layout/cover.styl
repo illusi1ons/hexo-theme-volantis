@@ -126,31 +126,31 @@
     .icon
       position: absolute
       display:block
-      line-height: 2.5rem
+      line-height: 2.8rem
       width: $iconW
       top: 0
       left: $iconMargin+1px
       color: alpha($color-p, .75)
     .input
       display: block
-      height: 2.5rem
+      height: 2.8rem
       width: 100%
       box-shadow: none
       box-sizing: border-box
-      font-size: $fontsize-meta
+      font-size: $fontsize-h5
       -webkit-appearance: none
       padding-left: $iconW + $iconMargin
       @media screen and (max-width: $device-mobile)
         padding-left: $iconW + $iconMargin
       border-radius: 1.4rem
-      background: alpha($color-card, .6)
-      backdrop-filter: blur(10px)
-      border: none
+      background: alpha($color-card, .0)
+      backdrop-filter: blur(8px)
+      border: 1px solid #b2b2b596
       color: var(--color-text)
       &:hover
-        background: alpha($color-card, .8)
+        background: alpha($color-card, .65)
       &:focus
-        background: alpha($color-card, 1)
+        background: alpha($color-card, 0.5)
 
 
 .cover-wrapper .list-h
@@ -190,9 +190,10 @@
       white-space: nowrap
       flex-direction: row
       align-items: baseline
+      font-size: $fontsize-list
       padding: 2px
       margin: 4px
-      color: var(--color-site-inner)
+      color: #303e329c
       opacity: .75
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
       border-bottom: 2px solid transparent
@@ -202,7 +203,7 @@
         font-size: $fontsize-list
       &:hover, &.active, &:active
         opacity: 1
-        border-bottom: 2px solid var(--color-site-inner)
+        border-bottom: 2px solid #303e329c
   &.dock .menu, &.featured .menu, &.focus .menu
     border-radius: $border-button + 2px
     .list-h a
