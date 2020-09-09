@@ -62,7 +62,7 @@ navbar:
     #      url: examples/
     #    - name: 特别感谢
     #      url: contributors/
-  search: illusion's code   # Search bar placeholder
+  search: illusion's keyword   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
 
